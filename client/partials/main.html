@@ -1,0 +1,28 @@
+<div class="navbar navbar-inverse navbar-fixed-top demo-nav" role="navigation" bs-navbar>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Google Calendar Booking App Demo</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a ng-click="showAddEventModal()">Add Event</a></li>
+    <li><a ng-click="logout()">Logout</a></li>
+  </ul>
+</div>
+
+<div id="container">
+	<div class="col-md-4">
+        <h2>Upcoming Events</h2>
+        <input ng-model="search" type="text" class="form-control" style="max-width:250px;" placeholder="Search"></input>
+        <div ng-repeat="event in events | filter:search" class="listItem">
+            <a ng-click="setCurrentEvent(event)">{{event.summary}}</a>
+            - {{ event.start.dateTime || event.start.date | date:medium }}
+        </div>
+    </div>
+    <div id="mainContent" class="col-md-8">
+        <h2>{{ currentEvent.summary }}</h2>
+        <div class="well" ng-show="currentEvent">
+            When: {{currentEvent.start.date || currentEvent.start.dateTime | date:'MMM d, y @ h:mm a'}}<br/>
+            Description: {{currentEvent.description}}<br/>
+        </div>
+    </div>
+</div>
+

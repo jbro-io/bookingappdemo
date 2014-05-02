@@ -1,0 +1,21 @@
+{
+  "name": "bookingappdemo",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jonathan Broquist",
+    "email": "jonathan@jbro.io",
+    "url": "http://jbro.io"
+  },
+  "description": "Demo application for integrating with the Google Calendar API",
+  "dependencies": {
+    "angular": "~1.2.12",
+    "angular-animate": "~1.2.10",
+    "angular-mocks": "~1.2.10",
+    "angular-route": "~1.2.10",
+    "bootstrap": "~3.1.0",
+    "angular-bootstrap": "~0.10.0",
+    "angular-cookies": "~1.2.12",
+    "angular-strap": "~2.0.1",
+    "angular-motion": "~0.3.2"
+  }
+}
